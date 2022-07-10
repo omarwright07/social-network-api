@@ -25,3 +25,7 @@ Your challenge is to build an API for a social network web application where use
 https://github.com/omarwright07/social-network-api
 
 ## Recording Location
+Part 1 -- Everything But Delete User:
+https://drive.google.com/file/d/16jr0ZdCtvGQKeCsixAdCsVQshBfphVZh/view
+Part 2 -- Delete User:
+https://drive.google.com/file/d/1zpG8Sw28Id18XA4532G9DCAJUROF6Dwy/view
