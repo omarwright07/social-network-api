@@ -26,11 +26,11 @@ const userController = {
             .populate({
                 path: 'thoughts',
                 select: '-__v'
-            },
-                {
-                    path: 'friends',
-                    select: '-__v'
-                })
+            })
+            .populate({
+                path: 'friends',
+                select: '-__v'
+            })
             .select('-__v')
             .then(dbUserData => {
                 if (!dbUserData) {
@@ -79,10 +79,10 @@ const userController = {
     // ##########################################
 
     // POST to add a new friend to a user's friend list
-    addFriend({ params, body }, res) {
+    addFriend({ params }, res) {
         User.findOneAndUpdate(
             { _id: params.id },
-            { $push: { friends: body } },
+            { $push: { friends: params.friendId } },
             { new: true, runValidators: true }
         )
             .then(dbUserData => {
@@ -102,7 +102,7 @@ const userController = {
     deleteFriend({ params }, res) {
         User.findOneAndUpdate(
             { _id: params.id },
-            { $pull: { friends: {friendId: params.friendId} } },
+            { $pull: { friends: params.friendId } },
             { new: true }
         )
             .then(dbUserData => {
