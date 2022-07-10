@@ -22,6 +22,6 @@ Your challenge is to build an API for a social network web application where use
 * THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
 ## GitHub Location
-https://github.com/omarwright07/tech-blog
+https://github.com/omarwright07/social-network-api
 
 ## Recording Location
